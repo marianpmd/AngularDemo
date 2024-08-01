@@ -1,0 +1,21 @@
+<div class="main-container">
+
+  <p>Container {{containerName}}</p>
+
+
+  <button [disabled]="isDisabled" (click)="onButtonClick()">Button</button>
+
+
+
+  <input type="search" [(ngModel)]="searchTerm">
+  <p style="background-color: green; min-width: 100px">{{searchTerm}}</p>
+
+  <ul>
+    <li *ngFor="let item of items; index as i">{{item}} {{i}}</li>
+  </ul>
+
+  <p>Pressed button : {{buttonPressed}}</p>
+
+  <app-two [nameForTwo]="childName" (buttonPressed)="onTwoButtonPress($event)"></app-two>
+
+</div>
